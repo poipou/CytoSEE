@@ -9,11 +9,11 @@
 #' @param n_core how many cores you want to use
 #' @param sgd_batches input parameter for largeVis (refer largeVis for details)
 #' @param tsne_pca whether use pca in tsne
-#' @importFrom  largeVis largeVis
-#' @importFrom  Rtsne Rtsne
+#' @import  largeVis
+#' @import  Rtsne
 #' @export
 #'
-pro_reduce_dim <- function(data,n_core = NULL, sgd_batches = 0.5, tsne_pca=TRUE,method="PCA"){
+cytosee_reduce_dim <- function(data,n_core = NULL, sgd_batches = 0.5, tsne_pca=TRUE,method="PCA"){
     red_dim <-list()
     # run pca
 
