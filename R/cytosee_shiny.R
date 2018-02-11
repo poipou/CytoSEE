@@ -16,6 +16,7 @@
 #' @import vegan
 #' @import pheatmap
 #' @import recharts
+#' @import hexbin
 #' @importFrom  DT renderDataTable dataTableOutput datatable
 #' @importFrom shinyjs useShinyjs showElement hideElement alert
 #' @importFrom flowCore read.FCS logTransform arcsinhTransform exprs transformList transform colnames flowFrame parameters keyword
@@ -1359,7 +1360,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
 
@@ -1393,7 +1394,7 @@ server = function(input,output,session){
                   }
                   cyto@mst<<-MST
                   incProgress(6/10,message="Reduce the Dimension...")
-                  cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                  cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                   incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
@@ -1425,7 +1426,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
@@ -1458,7 +1459,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
@@ -1491,7 +1492,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
@@ -1524,7 +1525,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
@@ -1560,7 +1561,7 @@ server = function(input,output,session){
                    }
                    cyto@mst<<-MST
                    incProgress(6/10,message="Reduce the Dimension...")
-                   cyto@dim.red<<-pro_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
+                   cyto@dim.red<<-cytosee_reduce_dim(cyto@fcs.data[cyto@event.use,][,cyto@channel.use],method = input$pre_reduce_method)
                    incProgress(1/10,message="Complete!")
                  })
     hideElement(selector = ".Step2",animType ="fade",anim = TRUE,time = 0.3)
