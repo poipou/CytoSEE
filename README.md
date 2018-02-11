@@ -32,3 +32,7 @@ devtools::install_github("mingchen-lab/cytosee")
 library("cytosee")
 cytosee_go()
 ```
+
+### Document
+
+Here we present a sample example to show how to use the Cytosee
