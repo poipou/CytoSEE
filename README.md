@@ -11,6 +11,15 @@
 ```R
 # you need install devtools first
 install.package("devtools")
+# then Bioinstaller should also be installed
+source(http://bioconductor.org/biocLite.R)
+
+# install other tools from github
+devtools::install_github("JinmiaoChenLab/Rphenograph")
+devtools::install_github("madlogos/recharts")
+
+biocLite(c("FlowSOM","flowCore","SamSPEATRAL","flowMeans"))
+install.package(c("Rtsne","largeVis","hexbin"))
 
 # install CytoSEE from github
 devtools::install_github("mingchen-lab/cytosee")
